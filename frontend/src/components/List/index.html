@@ -1,3 +1,30 @@
-<div>
-    list
+<div class="list">
+    <div class="list__search-box">
+        <Input @change="filterNews($event)"/>
+    </div>
+    <div class="content">
+        <div class="row">
+            <div
+                v-for="(item, index) in news.list"
+                :key="item.id + index"
+                class="col"
+            >
+                <card
+                    :title="item.title"
+                    :date="item.date"
+                    :main="item.spotlight && app.device === 'desktop'"
+                    :image="item.image"
+                    :url="item.url"
+                    :tags="item.theme"
+                />
+            </div>
+        </div>
+        <div v-if="news.page.current < news.page.total" class="row">
+            <div class="col">
+                <div class="list__more">
+                    <Button title="Загрузить еще" more @click="loadMore" :block="app.device === 'desktop'"/>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

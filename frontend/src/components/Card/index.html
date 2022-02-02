@@ -1,0 +1,29 @@
+﻿<div :class="['card', classes]">
+    <div class="card__item">
+        <tag>{{ formattedDate }}</tag>
+    </div>
+    <div v-if="main" class="card__item card__item--tags">
+        <tag
+            v-for="(tag, index) in formattedTags"
+            :key="index"
+            contrast
+            outlined
+        >
+            {{ tag }}
+        </tag>
+    </div>
+    <div class="card__item">
+        <a :href="url" class="card__title">
+            {{ title }}
+        </a>
+    </div>
+    <div v-if="!main" class="card__item card__item--tags">
+        <tag
+            v-for="(tag, index) in formattedTags"
+            :key="index"
+            outlined
+        >
+            {{ tag }}
+        </tag>
+    </div>
+</div>

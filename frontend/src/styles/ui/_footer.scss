@@ -57,7 +57,7 @@
 		}
 
 		&--fb {
-			@include svg(100%, 100%, 'icon_soc-fb');
+			@include svg(100%, 100%, 'captain');
 
 			&:hover {
 				 @include svg-fill(100%, 100%, 'icon_soc-fb', $pomegranate);

@@ -1,20 +1,21 @@
+import '@/utils/filter' // global
+
+import App from './App'
+import { AppDeviceEnquire } from '@/utils/mixin'
+import LayoutDefault from './layouts/Default'
+import List from '@/components/List'
+import Scheme from '@/components/Scheme'
 // The Vue build version to load with the `import` command
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
-import App from './App'
-import store from './store/'
-
-import '@/utils/filter' // global
-import { getLang } from '@/utils/i18n'
-import { AppDeviceEnquire } from '@/utils/mixin'
-import { showNotyfications } from '@/utils/notifications'
 import { VueAxios } from '@/utils/request'
-
-import List from '@/components/List'
-import Scheme from '@/components/Scheme'
+import { getLang } from '@/utils/i18n'
+import { showNotyfications } from '@/utils/notifications'
+import store from './store/'
 
 Vue.component('list', List)
 Vue.component('scheme', Scheme)
+Vue.component('layout-default', LayoutDefault)
 
 // https://webpack.js.org/guides/dependency-management/#require-context
 const requireComponent = require.context(

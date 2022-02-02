@@ -2,7 +2,7 @@
 	color: $white;
 	font-weight: 500;
 	// min-width: 232px;
-	padding: 10px 30px;
+	padding: 10px 34px;
 	outline: none;
 	text-decoration: none;
 	border: none;
@@ -19,6 +19,10 @@
 		// box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.2);
 		// background-color: $pomegranate;
 	}
+
+    &--block {
+        width: auto;
+    }
 
 	&--disabled, &:disabled {
 		background-color: grey;
@@ -75,12 +79,15 @@
 	}
 
 	&--more {
-		font-weight: 500;
-		text-transform: uppercase;
+		font-size: 16px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 19px;
+		letter-spacing: 0em;
+		text-align: center;
 		color: #fff;
-		background-color: transparent;
-		padding: 0;
-
+		background-image: linear-gradient(45deg, $pomegranate, $tango);
+		mix-blend-mode: normal;
 		&:hover {
 			box-shadow: none;
 
@@ -117,11 +124,11 @@
 		// 	background-color: transparent;
 		// }
 
-		// &.button--disabled, &:disabled {
-		// 	background-color: transparent;
-		// 	color: grey;
-		// 	border: 1px dotted grey;
-		// }
+		&.button--disabled, &:disabled {
+			background-color: transparent;
+			color: grey;
+			border: 1px dotted grey;
+		}
 
 		&-gray {
 			float: right;
@@ -152,7 +159,7 @@
 	}
 
 	&--outline {
-		padding: 15px 30px;
+		padding: 15px 34px;
 		letter-spacing: 0.3px;
 		font-weight: normal;
 		border: 1px solid $white;

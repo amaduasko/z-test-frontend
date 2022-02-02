@@ -1,0 +1,32 @@
+﻿.tag {
+    display: inline-block;
+    border: 1px solid #97999B;
+    color: #ffffff;
+    border-radius: 2px;
+    background-color: #97999B;
+    padding: 3px 7px;
+
+    font-size: 12px;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 14px;
+    letter-spacing: 0.2em;
+    text-align: center;
+
+    &--outlined {
+        color: #97999B;
+        background-color: transparent;
+        border-color: #D9D9D6
+    }
+
+    &--contrast {
+        color: #ffffff;
+        border-color: #ffffff;
+        padding: 3px 4px;
+    }
+
+    @include breakpoint(mobile) {
+        font-size: 10px;
+        line-height: 12px;
+    }
+}

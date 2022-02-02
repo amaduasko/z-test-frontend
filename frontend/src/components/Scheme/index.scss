@@ -1,0 +1,45 @@
+.scheme {
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    text-align: center;
+    &__item {
+        &--active {
+            .scheme__active-rect {
+                width: 15px;
+                height: 15px;
+            }
+        }
+    }
+    &__title,
+    &__content {
+        font-family: Roboto;
+        fill: #231F20;
+    }
+    &__title {
+        font-size: 18px;
+        line-height: 21px;
+        &--small {
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+    }
+    &__content {
+        font-size: 16px;
+        font-style: normal;
+        font-weight: normal;
+        line-height: 24px;
+        text-align: left;
+        white-space: normal;
+    }
+    &__text {
+        font-size: 16px;
+        line-height: 24px;
+        text-align: left;
+    }
+    &__active-rect {
+        cursor: pointer;
+    }
+}
